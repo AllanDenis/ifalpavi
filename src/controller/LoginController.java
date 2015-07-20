@@ -11,7 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import model.LoginDAO;
-@WebServlet(description = "Descrição aqui", urlPatterns = { "/LoginController" })
+
+@WebServlet(description = "Controlador de login", urlPatterns = { "/LoginController" })
 public class LoginController extends HttpServlet {
 	/**
 	 * 
@@ -30,11 +31,12 @@ public class LoginController extends HttpServlet {
 	    String p=request.getParameter("senha");
 	    
 	    if(LoginDAO.validate(n, p)){  
-	        RequestDispatcher rd=request.getRequestDispatcher("index.jsp");
+	    	out.print("Login OK");  
+	    	RequestDispatcher rd=request.getRequestDispatcher("index.jsp");
 	        rd.forward(request,response);  
 	    }  
 	    else{  
-	        out.print("Senha Incorreta");  
+	        out.print("Falha de login: erro de banco");  
 	        RequestDispatcher rd=request.getRequestDispatcher("index.jsp");  
 	        rd.include(request,response);  
 	    }  
