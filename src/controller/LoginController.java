@@ -5,12 +5,13 @@ import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import model.LoginDAO;
-
+@WebServlet(description = "Descrição aqui", urlPatterns = { "/LoginController" })
 public class LoginController extends HttpServlet {
 	/**
 	 * 
@@ -34,7 +35,7 @@ public class LoginController extends HttpServlet {
 	    }  
 	    else{  
 	        out.print("Senha Incorreta");  
-	        RequestDispatcher rd=request.getRequestDispatcher("login.html");  
+	        RequestDispatcher rd=request.getRequestDispatcher("index.jsp");  
 	        rd.include(request,response);  
 	    }  
 	          

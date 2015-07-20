@@ -7,10 +7,10 @@ public class LoginDAO {
 	    boolean status=false;  
 	    try{  
 	    	Class.forName("oracle.jdbc.driver.OracleDriver");  
-	    	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:1521/gce","root","");  
+	    	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/gce","root","87654321");  
 	          
 		    PreparedStatement ps=con.prepareStatement(  
-		    "select * from login where usuario=? and senha=?");  
+		    "select * from usuarios where usuario=? and senha=?");  
 		    ps.setString(1,user);  
 		    ps.setString(2,pass);  
 		          
