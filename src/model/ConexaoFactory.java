@@ -9,11 +9,11 @@ public class ConexaoFactory {
 	private final static String urlBanco = "jdbc:mysql://127.0.0.1/gce";
 	private final static String userBanco = "root";
 	private final static String senhaBanco = "";
-	
-	public static Connection criar(){
+
+	public static Connection criar() {
 		return criar(userBanco, senhaBanco);
 	}
-	
+
 	public static Connection criar(String user, String pass) {
 		try {
 			Class.forName(classe);
