@@ -4,6 +4,7 @@ public class Usuario {
 	String nome;
 	String usuario;
 	String senha;
+	boolean status;
 	
 	public String getNome() {
 		return nome;
@@ -23,4 +24,10 @@ public class Usuario {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
+	public boolean getStatus() {
+		return status;
+	}
+	public void setStatus(boolean status) {
+		this.status = status;
+	}	
 }
