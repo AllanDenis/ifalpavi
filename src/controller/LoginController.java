@@ -31,12 +31,12 @@ public class LoginController extends HttpServlet {
 	    String p=request.getParameter("senha");
 	    
 	    if(LoginDAO.validate(n, p)){  
-	    	out.print("Login OK");  
+	    	System.out.println("Login OK");  
 	    	RequestDispatcher rd=request.getRequestDispatcher("index.jsp");
 	        rd.forward(request,response);  
 	    }  
 	    else{  
-	        out.print("Falha de login: erro de banco");  
+	        System.err.println(this.getClass().getName() + ": falha de login");  
 	        RequestDispatcher rd=request.getRequestDispatcher("index.jsp");  
 	        rd.include(request,response);  
 	    }  
