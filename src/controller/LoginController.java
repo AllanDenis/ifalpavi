@@ -5,12 +5,14 @@ import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import model.LoginDAO;
 
+@WebServlet(description = "Controlador de login", urlPatterns = { "/LoginController" })
 public class LoginController extends HttpServlet {
 	/**
 	 * 
@@ -29,12 +31,13 @@ public class LoginController extends HttpServlet {
 	    String p=request.getParameter("senha");
 	    
 	    if(LoginDAO.validate(n, p)){  
-	        RequestDispatcher rd=request.getRequestDispatcher("index.jsp");
+	    	out.print("Login OK");  
+	    	RequestDispatcher rd=request.getRequestDispatcher("index.jsp");
 	        rd.forward(request,response);  
 	    }  
 	    else{  
-	        out.print("Senha Incorreta");  
-	        RequestDispatcher rd=request.getRequestDispatcher("login.html");  
+	        out.print("Falha de login: erro de banco");  
+	        RequestDispatcher rd=request.getRequestDispatcher("index.jsp");  
 	        rd.include(request,response);  
 	    }  
 	          

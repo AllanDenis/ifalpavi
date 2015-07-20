@@ -6,15 +6,16 @@ public class LoginDAO {
     public static boolean validate(String user,String pass){  
 	    boolean status=false;  
 	    try{  
-	    	Class.forName("oracle.jdbc.driver.OracleDriver");  
-	    	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:1521/gce","root","");  
+	    	Class.forName("com.mysql.jdbc.Driver");  
+	    	Connection con=DriverManager.getConnection("jdbc:mysql://localhost/gce","root","");  
 	          
 		    PreparedStatement ps=con.prepareStatement(  
-		    "select * from login where usuario=? and senha=?");  
+		    "select * from usuarios where usuario=? and senha=?");  
 		    ps.setString(1,user);  
 		    ps.setString(2,pass);  
 		          
 		    ResultSet rs=ps.executeQuery();  
+		    System.err.println(ps.getWarnings());
 		    status=rs.next();  
 	              
 	    }
