@@ -1,0 +1,51 @@
+
+    <div id="modal_login" class="modal fade">
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	                <h3 class="modal-title"><b>Login</b></h3>
+	            </div>
+						<form action="LoginController" method="POST">
+	            <div class="modal-body">
+							<div class="form-group">
+				            	<label>Usuário: </label>
+				            	<input type="text" name="usuario" class="form-control" required="required">
+				            	<label>Senha: </label>
+				            	<input type="password" name="senha" class="form-control" required="required">
+			            	</div>
+	            </div>
+	            <div class="modal-footer">
+	                <button type="submit" class="btn btn-success">Login</button>
+	            </div>
+						</form>
+	        </div>
+	    </div>
+	</div>
+	
+	<div id="modal_cadastro" class="modal fade">
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	                <h3 class="modal-title"><b>Cadastro</b></h3>
+	            </div>
+	            <div class="modal-body">
+						<form action="#" method="POST">
+							<div class="form-group">
+				            	<label>Nome: </label>
+				            	<input type="text" name="nomeuser" class="form-control" required="required">
+				            	<label>Usuário: </label>
+				            	<input type="text" name="usuario" class="form-control" required="required">
+				            	<label>Senha: </label>
+				            	<input type="password" name="senha" class="form-control" required="required">
+			            	</div>
+						</form>
+	            </div>
+	            <div class="modal-footer">
+	                <button type="submit" class="btn btn-success">Cadastrar</button>
+	                <button type="reset" class="btn btn-danger">Limpar</button>
+	            </div>
+	        </div>
+	    </div>
+	</div>
