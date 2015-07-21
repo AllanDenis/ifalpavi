@@ -1,0 +1,70 @@
+<div class="bs-example">
+        
+    <div id="modal_add_competicao" class="modal fade">
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	                <h3 class="modal-title"><b>Cadastrar Competição</b></h3>
+	            </div>
+	            <div class="modal-body">
+						<form action="#" method="POST" role="form">
+							<div class="form-group">
+				            	<label>Nome da Competição: <font color="red">*</font></label>
+				            	<input type="text" name="nome_competicao" placeholder="Nome da Competição" class="form-control" required="required">
+			            	</div>
+				        	<div class="form-group">
+								<label>Estado/Município: </label>
+								<input type="text" name="estado_municipio" placeholder="Estado/Mucicípio" class="form-control">
+							</div>
+							<div class="form-group">
+								<label>Responsável: </label>
+								<input type="text" name="responsavel" placeholder="Responsável" class="form-control">
+							</div>
+							<div class="form-group">
+								<div class="hero-unit" >
+					               	<b>Início:</b> <input type="text" placeholder="Início"  id="dateinic" class="form-control">
+					               	<b>Término:</b> <input  type="text" placeholder="Término"  id="datefim" class="form-control">
+					        	</div>
+							</div>
+							<div class="form-group">
+								<label>Observação: </label>
+								<textarea name="obs" placeholder="Observação" class="form-control"></textarea>
+							</div>
+						</form>
+	            </div>
+	            <div class="modal-footer">
+	                <button type="reset" class="btn btn-danger" data-dismiss="modal">Limpar</button>
+	                <button type="submit" class="btn btn-primary">Cadastrar</button>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</div>
+
+<div class="bs-example">
+        
+    <div id="modal_select_competicao" class="modal fade">
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	                <h3 class="modal-title"><b>Selecionar Competição</b></h3>
+	            </div>
+	            <div class="modal-body">
+					<form action="#" method="POST" role="form">
+						<div class="form-group">
+				            <select class="form-control">
+				            	<option>JOGOS INTERNOS</option>
+				            </select>
+						</div>
+					</form>
+	            </div>
+	            <div class="modal-footer">
+	                <button type="reset" class="btn btn-danger" data-dismiss="modal">Limpar</button>
+	                <button type="submit" class="btn btn-primary">Cadastrar</button>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</div>

@@ -1,0 +1,40 @@
+<div class="bs-example">
+        
+    <div id="modal_add_modalidade" class="modal fade">
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	                <h3 class="modal-title"><b>Cadastrar Modalidade</b></h3>
+	            </div>
+	            <div class="modal-body">
+						<form action="#" method="POST">
+							<div class="form-group">
+				            	<label>Nome da Modalidade: <font color="red">*</font></label>
+				            	<input type="text" name="nome_competicao" class="form-control" required="required">
+			            	</div>
+				        	<div class="form-group">
+								<label>Tipo de Disputa </label>
+								<br><input type="radio" name="disputa"> Individual
+								<input type="radio" name="disputa"> Coletiva
+							</div>
+							<div class="form-group">
+								<label>Máx. de Atletas </label>
+								<input type="text" name="max_atletas" class="form-control" required="required">
+							</div>
+							<div class="form-group">
+								<label>Sistema de Pontuação: </label>
+								<br><b>Vitória:</b> <input type="radio" name="vitoria"> 3 <input type="radio" name="vitoria"> 2 <input type="radio" name="vitoria"> 1  <input type="radio" name="vitoria"> 0
+								<br><b>Empate:</b> <input type="radio" name="empate"> 3 <input type="radio" name="empate"> 2 <input type="radio" name="empate"> 1 <input type="radio" name="empate"> 0
+								<br><b>Derrota:</b> <input type="radio" name="derrota"> 3 <input type="radio" name="derrota"> 2 <input type="radio" name="derrota"> 1 <input type="radio" name="derrota"> 0
+							</div>
+						</form>
+	            </div>
+	            <div class="modal-footer">
+	                <button type="reset" class="btn btn-danger" data-dismiss="modal">Limpar</button>
+	                <button type="submit" class="btn btn-primary">Cadastrar</button>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</div>
