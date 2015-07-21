@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -46,7 +45,6 @@
 	<c:import url="view/cartoes.jsp"></c:import>
 	<c:import url="view/artilheiros.jsp"></c:import>
 	<c:import url="view/tabela.jsp"></c:import>
-	
 	<c:import url="view/view_admin.html"></c:import>
 </div>
 <br>
